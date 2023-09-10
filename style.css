@@ -6,13 +6,35 @@
 .container {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(41, 38, 38);;
+    background-color: rgb(41, 38, 38);
+    padding: 5vh 0 10vh 0;
 }
 .content {
     width: 80vw;
-    height: 70vh;
+    height: 85vh;
     margin: 0 auto;
+    overflow: hidden;
 }
 .photos {
-
+    width: 320vw;
+    height: 78vh;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    right: 0;
+}
+.photo_img {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+.textAndPagination {
+    margin-top: 2vh;
+}
+.text {
+    display: flex;
+}
+.text p {
+    color: white;
+    font-size: 1.5vw;
 }
