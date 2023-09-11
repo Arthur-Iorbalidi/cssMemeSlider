@@ -17,24 +17,109 @@
 }
 .photos {
     width: 320vw;
-    height: 78vh;
+    height: 76vh;
     display: flex;
     justify-content: space-between;
     position: relative;
     right: 0;
+    transition: 500ms all;
 }
 .photo_img {
     width: 100%;
     margin: 0 auto;
-    border-radius: 30px;
+    border-radius: 1vw;
 }
 .textAndPagination {
     margin-top: 2vh;
+    display: flex;
+    justify-content: space-between;
 }
 .text {
-    display: flex;
+    width: 10vw;
+    overflow: hidden;
 }
-.text p {
+.text_div {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+    position: relative;
+    right: 0;
+    transition: 500ms all;
+}
+.text_div p {
     color: white;
     font-size: 1.5vw;
+    width: 10vw;
+}
+.pagination {
+    width: 7vw;
+    display: flex;
+    justify-content: space-around;
+}
+.pagination_item {
+    position: relative;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    border: 0.15vw solid rgb(98, 175, 227);
+    cursor: pointer;
+    background-color: rgb(98, 175, 227);
+}
+.pagination_item:hover {
+    background-color: white;
+    border: 0.15vw solid white;
+}
+.content_input {
+    display: none;
+}
+/* .pagination_item_active {
+    background-color: rgb(41, 38, 38);
+}
+.pagination_item_active:hover {
+    background-color: rgb(41, 38, 38);
+} */
+/* .pagination_item::before {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    pointer-events: all;
+} */
+#slide1:checked ~ .photos {
+    right: 0;
+}
+#slide2:checked ~ .photos {
+    right: 100%;
+}
+#slide3:checked ~ .photos {
+    right: 200%;
+}
+#slide4:checked ~ .photos {
+    right: 300%;
+}
+#slide1:checked ~ .textAndPagination .text .text_div {
+    right: 0;
+}
+#slide2:checked ~ .textAndPagination .text .text_div {
+    right: 100%;
+}
+#slide3:checked ~ .textAndPagination .text .text_div {
+    right: 200%;
+}
+#slide4:checked ~ .textAndPagination .text .text_div {
+    right: 300%;
+}
+
+#slide1:checked ~ .textAndPagination .pagination .pagination_item1 {
+    background-color: rgb(41, 38, 38);
+}
+#slide2:checked ~ .textAndPagination .pagination .pagination_item2 {
+    background-color: rgb(41, 38, 38);
+}
+#slide3:checked ~ .textAndPagination .pagination .pagination_item3 {
+    background-color: rgb(41, 38, 38);
+}
+#slide4:checked ~ .textAndPagination .pagination .pagination_item4 {
+    background-color: rgb(41, 38, 38);
 }
