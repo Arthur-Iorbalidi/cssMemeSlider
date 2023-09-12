@@ -10,46 +10,49 @@
     padding: 5vh 0 10vh 0;
 }
 .content {
-    width: 80vw;
+    width: 67.5vw;
     height: 85vh;
     margin: 0 auto;
+}
+.containerForPhotos {
     overflow: hidden;
 }
 .photos {
-    width: 320vw;
-    height: 76vh;
+    width: 270vw;
+    height: 38vw;
     display: flex;
     justify-content: space-between;
     position: relative;
     right: 0;
-    transition: 500ms all;
+    transition: 750ms all;
 }
 .photo_img {
-    width: 100%;
+    width: 67.5vw;
+    height: 100%;
     margin: 0 auto;
     border-radius: 1vw;
 }
 .textAndPagination {
-    margin-top: 2vh;
+    margin-top: 3vw;
     display: flex;
     justify-content: space-between;
 }
 .text {
-    width: 10vw;
+    width: 12vw;
     overflow: hidden;
 }
 .text_div {
     display: flex;
     justify-content: space-between;
-    width: 40vw;
+    width: 48vw;
     position: relative;
     right: 0;
-    transition: 500ms all;
+    transition: 750ms all;
 }
 .text_div p {
     color: white;
     font-size: 1.5vw;
-    width: 10vw;
+    width: 12vw;
 }
 .pagination {
     width: 7vw;
@@ -72,30 +75,16 @@
 .content_input {
     display: none;
 }
-/* .pagination_item_active {
-    background-color: rgb(41, 38, 38);
-}
-.pagination_item_active:hover {
-    background-color: rgb(41, 38, 38);
-} */
-/* .pagination_item::before {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    pointer-events: all;
-} */
-#slide1:checked ~ .photos {
+#slide1:checked ~ .containerForPhotos .photos {
     right: 0;
 }
-#slide2:checked ~ .photos {
+#slide2:checked ~ .containerForPhotos .photos {
     right: 100%;
 }
-#slide3:checked ~ .photos {
+#slide3:checked ~ .containerForPhotos .photos {
     right: 200%;
 }
-#slide4:checked ~ .photos {
+#slide4:checked ~ .containerForPhotos .photos {
     right: 300%;
 }
 #slide1:checked ~ .textAndPagination .text .text_div {
@@ -122,4 +111,13 @@
 }
 #slide4:checked ~ .textAndPagination .pagination .pagination_item4 {
     background-color: rgb(41, 38, 38);
+}
+
+@media (max-width: 1024px) {
+    .textAndPagination {
+        flex-direction:column-reverse;
+    }
+    .pagination {
+        margin: 0 auto;
+    }
 }
